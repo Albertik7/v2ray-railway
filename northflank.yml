@@ -1,0 +1,10 @@
+version: '1'
+services:
+  v2ray:
+    build:
+      context: .
+    ports:
+      - 8080
+    resources:
+      cpu: 0.1
+      memory: 128
