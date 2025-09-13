@@ -1,33 +1,10 @@
-{
-  "log": {
-    "access": "/dev/stdout",
-    "error": "/dev/stderr",
-    "loglevel": "warning"
-  },
-  "inbounds": [
-    {
-      "port": 443,
-      "protocol": "vmess",
-      "settings": {
-        "clients": [
+{ "log": { "loglevel": "warning" }, "inbounds": [ { "port": 8080, "protocol": "vless", "settings": { "clients": [
           {
-            "id": "5fe59053-d014-48f0-b498-472616b2ef38",
-            "alterId": 0
+            "id": "ae81f88a-b202-4867-b77d-6e6c949f2b3f",
+            "level": 0
           }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "path": "/"
-        }
-      }
-    }
-  ],
-  "outbounds": [
+        ], "decryption": "none" }, "streamSettings": { "network": "ws", "wsSettings": { "path": "/" } } } ], "outbounds": [
     {
-      "protocol": "freedom",
-      "settings": {}
+      "protocol": "freedom"
     }
-  ]
-}
+  ] }
