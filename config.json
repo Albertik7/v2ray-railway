@@ -1,7 +1,4 @@
 {
-  "log": {
-    "loglevel": "warning"
-  },
   "inbounds": [
     {
       "port": 8080,
@@ -9,23 +6,27 @@
       "settings": {
         "clients": [
           {
-            "id": "ae81f88a-b202-4867-b77d-6e6c949f2b3f",
-            "level": 0
+            "id": "d0ca549d-961d-4531-8c01-cf4e6810cff0",
+            "level": 0,
+            "email": "user@example.com"
           }
         ],
         "decryption": "none"
       },
       "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "path": "/"
+        "network": "tcp",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
         }
       }
     }
   ],
   "outbounds": [
     {
-      "protocol": "freedom"
+      "protocol": "freedom",
+      "settings": {}
     }
   ]
 }
